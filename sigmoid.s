@@ -1,5 +1,5 @@
      AREA    exponential,CODE,READONLY
-     IMPORT printMsg
+     IMPORT printSigmoid
      EXPORT __main
      ENTRY 
 __main  FUNCTION	
@@ -41,7 +41,7 @@ Sigmoid  		VLDR.F32 S12,=1
 				VADD.F32 S13,S11,S12
 				VDIV.F32 S14,S12,S13
 				VMOV.F32 R0,S14
-				BL printMsg
+				BL printSigmoid
 				VADD.F32 S9,S9,S12
 				VMOV.F32 R9,S9;
 				B x_values
